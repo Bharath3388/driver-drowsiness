@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Drowsiness Detection</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #3a7bd5, #3a6073);
+    color: white;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.animated-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.video-container {
+    margin: 20px auto;
+    border: 5px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 640px;
+    height: 480px;
+}
+
+#video-feed {
+    width: 100%;
+    height: auto;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-heading">Driver Drowsiness Detection</h1>
+        <div class="video-container">
+            <img src="/video_feed" alt="Video Feed" id="video-feed">
+        </div>
+        <p class="instructions">Keep your face visible in the frame. Press <strong>Q</strong> in the terminal to quit the application.</p>
+    </div>
+</body>
+</html>
